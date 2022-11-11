@@ -1,6 +1,6 @@
 The java backend files basically do what Spring does in terms of they create an API endpoint but without using Spring.
 
-The end result of the "backend files" folder's java and HTML files' working together to create a JSON array that is structured like this:
+The end result of the "backend files" folder's java and HTML files working together is a JSON array that is structured like this:
 
 [
   {
@@ -86,3 +86,5 @@ The end result of the "backend files" folder's java and HTML files' working toge
     "totalRentDollars": 6825.0
   }
 ]
+
+... and this JSON array can be used as an endpoint for the javascrcipt in the "frontend files" folder to consume.
