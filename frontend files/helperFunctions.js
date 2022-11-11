@@ -61,7 +61,7 @@ export function createSecondLevelElement(
   if (hotelNameAsParam === "Hotel of Horrors") {
     p.style.color = "red";
 
-    //p.style.textShadow = "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black";
+   
   }
 
   // description arg determines these
@@ -124,31 +124,7 @@ export function createSecondLevelElement(
   return p;
 }
 
-// result = getEveryNth(roomsInfoList, 4, 3);
 
-// console.log(result);
-
-//this function returns an array
-export function getEveryNth(arr, numberInGroup, infoPlace) {
-  const result = [];
-  //console.log(arr);
-  for (let i = 0; i < arr.length; i += numberInGroup) {
-    result.push(arr[i + infoPlace]);
-    // console.log(
-    //   "when 3rd arg is " +
-    //     infoPlace +
-    //     " : " +
-    //     "i is " +
-    //     i +
-    //     " : i + 3rd arg is " +
-    //     (i + infoPlace) +
-    //     " : element is: " +
-    //     arr[i + infoPlace]
-    // );
-  }
-
-  return result;
-}
 
 export function makeLine(hotelName) {
   let line = document.createElement("hr");
@@ -161,17 +137,7 @@ export function makeLine(hotelName) {
   return line;
 }
 
-export function makeButton(output, hotelArray) {
-  let buttonOne = document.createElement("buttonOne");
-  buttonOne.addEventListener("click", () => {
-    newList = hotelArray.roomsInfoList.sort(sortAsendingBy("roomNumber"));
-  });
-  buttonOne.style.blockSize = "5em";
-  buttonOne.style.padding = "1em";
-  buttonOne.innerText = "Sort";
 
-  return output.appendChild(buttonOne);
-}
 
 //example call: hotelArray.roomsInfoList.sort(sortAsendingBy("roomNumber"));
 export function sortDescendingBy(prop) {
@@ -199,10 +165,4 @@ export function sortDescendingByDate() {
   };
 }
 
-export function makeButtonTest(target) {
-  target = target + 1;
 
-  console.log("++++++++++ target inside test function " + target);
-
-  return target;
-}
