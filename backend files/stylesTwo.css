@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(168, 171, 172);
+  font-size: 50px;
+  color: rgb(29, 31, 28);
+  text-align: center;
+  /*text-shadow: -0.5px 0.5px 3px #77ff6b;*/
+  margin-top: 0em;
+  margin-bottom: 0em;
+  font-family: "Goldman";
+  /* text-shadow: 0 0 10px rgb(12, 232, 9); */
+}
+
+input {
+  background-color: rgb(103, 103, 105);
+  font-size: 50px;
+  color: rgb(251, 251, 251);
+  text-align: center;
+  /*text-shadow: -0.5px 0.5px 3px #77ff6b;*/
+  margin-top: 0em;
+  margin-bottom: 0em;
+
+  font-family: "Goldman";
+}
+
+.hotelNameList {
+  font-size: 50px;
+  font-family: "Goldman";
+  background-color: rgb(103, 103, 105);
+  color: rgb(251, 251, 251);
+  margin-right: 20px;
+}
+
+#roomNumber {
+  width: 200px;
+}
+
+#btn {
+  background-color: rgb(33, 39, 36);
+  font-size: 50px;
+  color: rgb(168, 171, 172);
+  text-align: center;
+  /*text-shadow: -0.5px 0.5px 3px #77ff6b;*/
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-family: "Goldman";
+}
+.success {
+  color: green;
+  margin-bottom: 0;
+}
+
+.unavailable {
+  color: rgb(197, 31, 31);
+  margin-bottom: 0;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesTwo.css" />
+  </head>
+  <body>
+    <h3 id="frontEnd">Frontend</h3>
+    <div>
+      <label for="dateStart">Date Start: </label>
+      <input type="date" name="dateStart" id="dateStart" />
+      <br /><br />
+      <label for="dateEnd">Date End: </label>
+      <input type="date" name="dateEnd" id="dateEnd" />
+      <br /><br />
+      <label for="hotelName">Choose a Hotel:</label>
+      <select class="hotelNameList" name="hotelName" id="hotelName">
+        <option value="Money Maker">Money Maker</option>
+        <option value="On the Cheap">On the Cheap</option>
+        <option value="Hotel of Horrors">Hotel of Horrors</option>
+      </select>
+      <label for="roomNumber">Room: </label>
+      <input type="number" name="roomNumber" id="roomNumber" />
+    </div>
+    <div id="servletResponseDiv"></div>
+    <div>
+      <button id="btn" class="buttonsOne">
+        Click Me to call <br />
+        the fetch() POST <br />
+        method function
+      </button>
+    </div>
+
+    <script>
+      function doThePostThing() {
+        let value = document.getElementById("dateStart").value;
+        fetch("http://localhost:8081/HotelWithCalendar/Hotels", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            "dateStart": value,
+            "dateEnd": document.getElementById("dateEnd").value,
+            "roomNumber": document.getElementById("roomNumber").value,
+            "hotelName": document.getElementById("hotelName").value,
+          }),
+        })
+          .then((response) => {
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById("servletResponseDiv").innerHTML = data;
+            console.log(data);
+          })
+          .catch((err) => {
+            document.getElementById("servletResponseDiv").innerHTML = err;
+          });
+      }
+      let button = document.getElementById("btn");
+      function whenThisIsClicked(buttonAsParam, methodAsParam) {
+        buttonAsParam.addEventListener("click", methodAsParam);
+      }
+      whenThisIsClicked(button, doThePostThing);
+    </script>
+  </body>
+</html>
