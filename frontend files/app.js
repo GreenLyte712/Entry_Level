@@ -16,7 +16,6 @@ import {
 
 //Getting the DOM elements of the html page:
 const output = document.getElementById("output");
-//this will be passed into the json.sort() built-in function in order to sort json array if it's not sorted already.
 
 //Default view
 fetch("hotelsJSONForAppWithSet.json")
@@ -118,9 +117,7 @@ function doLoop(thing) {
   for (let i = 0; i < thing.length; i++) {
     // generates a span, gets the hotel name and puts it in a span, the span's background color and "span.textContent" font depends on what the hotel name is.
     output.appendChild(createTopLevelItem(thing[i].hotelName));
-    // if (i == 0) {
-    //   makeButton(output, thing[0], thing[0].roomsInfoList);
-    // }
+   
     //generates a p element, gets the total revenue for the hotel and formats the number value as dollars, the hotel name is needed as the 2nd arg bc that dictates what font will be applied to this .
     output.appendChild(
       createSecondLevelItemWithDollars(
@@ -128,7 +125,8 @@ function doLoop(thing) {
         thing[i].hotelName
       )
     );
-
+    
+    //gets the rooms details for each hotel
     for (let j = 0; j < thing[i].roomsInfoList.length; j++) {
       output.appendChild(makeLine(thing[i].hotelName));
 
