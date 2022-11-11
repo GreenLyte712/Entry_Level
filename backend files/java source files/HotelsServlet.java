@@ -123,8 +123,8 @@ public class HotelsServlet extends HttpServlet
 			meat(hotelName, roomNumber, dateStartLD, dateEndLD, out);
 		}
 
-		// placing the Hotel into the Set of Hotels.
-//		hotelSetForJSON.add(hotelHashMap.get(hotelName));
+		
+
 
 		//printing HashSet of Hotels to see what is in there. The Hotel class' toString method is a JSON representation of the Hotel. The HashSet is not sorted in any way.
 		System.out.println("*** hotelListForJSON as HashSet ***");
