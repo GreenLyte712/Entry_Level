@@ -1,8 +1,4 @@
-/* 
 
-SEE COMMENTS LINE 21, 36, 62, 78
-
-*/
 
 :root {
   --main-bg-color: rgb(121, 121, 121);
@@ -18,7 +14,7 @@ SEE COMMENTS LINE 21, 36, 62, 78
 
   font-size: 100px;
  
-/*   font-family: New Rocker;  <--------- CHANGE THIS TO WHATEVER FONT YOU WANT */
+  font-family: New Rocker;  
   color: rgb(2, 5, 24);
   margin-bottom: 5px;
   margin-top: 0.1em;
@@ -33,7 +29,7 @@ SEE COMMENTS LINE 21, 36, 62, 78
   margin-top: 1em;
   margin-bottom: 2rem;
   display: inline-block;
-/*   font-family: Goldman; <--------- CHANGE THIS TO WHATEVER FONT YOU WANT */
+  font-family: Goldman; 
   color: black;
 }
 
@@ -59,7 +55,7 @@ body {
   box-shadow: 0 0 0.23em 1px rgb(239, 239, 243);
   padding-bottom: 5em;
   color: rgb(19, 18, 18);
-  /*   font-family: Goldman; <--------- CHANGE THIS TO WHATEVER FONT YOU WANT */
+  font-family: Goldman; 
 }
 
 p {
@@ -75,7 +71,7 @@ p {
   block-size: 3.5em;
   padding: 0.45em;
   margin: 1em;
-/*   font-family: Goldman; <--------- CHANGE THIS TO WHATEVER FONT YOU WANT */
+  font-family: Goldman; 
   font-size: 0.75em;
   background-color: rgb(128, 129, 128);
 }
