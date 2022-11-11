@@ -87,4 +87,4 @@ The end result of the "backend files" folder's java and HTML files working toget
   }
 ]
 
-... and this JSON array can be used as an endpoint for the javascrcipt in the "frontend files" folder to consume.
+... and this JSON array can be used as an endpoint for the javascript in the "frontend files" folder to consume.
