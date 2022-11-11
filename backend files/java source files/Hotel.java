@@ -65,7 +65,7 @@ public class Hotel implements Comparable<Hotel>
 
 	}
 
-	@Override
+	@Override //using this.name as the differentiator
 	public int hashCode()
 	{
 		final int prime = 31;
@@ -74,7 +74,7 @@ public class Hotel implements Comparable<Hotel>
 		return result;
 	}
 
-	@Override
+	@Override //using this.name as the differentiator
 	public boolean equals(Object obj)
 	{
 		if (this == obj)
@@ -141,8 +141,7 @@ public class Hotel implements Comparable<Hotel>
 	}
 
 	@Override
-	// to make a sorted list have the Hotels sorted by total revenue in descending
-	// order.
+	// to make a sorted list have the Hotels sorted by total revenue in descending order.
 	public int compareTo(Hotel otherHotel)
 	{
 		if (otherHotel.getTotalRentDollars().compareTo(this.totalRentDollars) == -1)
